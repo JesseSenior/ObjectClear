@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "objectclear"
+version = "0.1.0"
+description = "ObjectClear: Object-Clearing Image Generation"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+dependencies = [
+    "accelerate",
+    "torch",
+    "torchvision",
+    "numpy",
+    "opencv-python",
+    "pillow",
+    "transformers",
+    "scipy",
+    "diffusers",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["objectclear*"]
+
+[tool.setuptools.package-data]
+objectclear = ["*"]
